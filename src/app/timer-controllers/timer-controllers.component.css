@@ -1,0 +1,26 @@
+.controllers{
+    background-color: white;
+    border-bottom-left-radius:0.5em;
+    border-bottom-right-radius:0.5em;
+    font-size: 8px;
+    margin: 0 auto;
+    font-family:'Helvetica', sans-serif;
+    display: grid;
+    grid-template-columns: 60% 20% 20%;
+    color: #303030;
+    text-align: center;
+}
+.text{
+    padding-left: 5%;
+}
+.delete_records,.record_time,.start_btn{
+    display: inline-block;
+    padding: 5%;
+}
+.fa-stopwatch,.fa-trash-alt{
+    margin-top: 4px;
+}
+.record_time,.start_btn{
+    border-right-style: solid;
+    border-block-end-width: 1px;
+}

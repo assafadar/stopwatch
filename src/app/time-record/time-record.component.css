@@ -1,0 +1,30 @@
+@font-face{
+    font-family: 'digital-7';
+    src: url('../../assets/fonts/digital-7.ttf')
+}
+@keyframes blinker{
+    50%{
+        opacity: 0;
+    }
+}
+.clock_wrapper{
+    font-family: digital-7,sans-serif;
+}
+.placeholder{
+    opacity: 0.2;
+    z-index: 50;
+    position: absolute;
+}
+.time_unit{
+    z-index: 100;
+    position: relative;
+}
+.time{
+    display: inline-block;
+    width: 10px;
+    max-width: 10px;
+    margin: 0%;
+}
+.seperator{
+    padding-left: 50%;
+}

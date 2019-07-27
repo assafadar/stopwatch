@@ -1,0 +1,8 @@
+.wrapper{
+    /* text-align: center; */
+    width: 45vw;
+    margin: 0 auto;
+}
+.inline_display{
+    display: inline-block;
+}

@@ -1,0 +1,12 @@
+<div class="list_wrapper">
+    <ul class="record_list">
+        <li *ngFor="let record of records; trackBy i">        
+            <div class="inline_display">
+                <app-time-record
+                    [record]="record" [isRunning]="false"></app-time-record>
+            </div>
+            <div class="delete_btn inline_display end" (click)="deleteRecord(record.id)">REMOVE</div>    
+            <hr>
+        </li>
+    </ul>
+</div>

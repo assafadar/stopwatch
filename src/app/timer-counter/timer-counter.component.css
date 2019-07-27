@@ -1,0 +1,12 @@
+.stopwatch_wrapper{
+    background-color: #211a23;
+    border-top-left-radius:0.5em;
+    border-top-right-radius:0.5em;
+    color: #7FFF00;
+    text-align: center;
+}
+.shadow{
+    -moz-box-shadow:    inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow:         inset 0 0 10px #000000;
+}

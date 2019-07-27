@@ -1,0 +1,20 @@
+.record_list{
+    color: white;
+    font-size: 8px;
+    margin: 0%;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+.delete_btn{
+    font-size: 5px;
+    padding: 1%;
+    background-color: red;
+    font-family:'Helvetica', sans-serif;
+    float: right;
+    margin: 5%;
+}
+hr{
+    border: 0.2px solid grey
+}

@@ -1,0 +1,26 @@
+<div class="clock_wrapper">
+    <div class="time">
+        <p class="placeholder">88</p>
+        <p class="time_unit">{{record.minutes}}</p>
+    </div>
+    <div class="time">
+        <span>
+            <p class="seperator time_unit" [ngStyle]="(isRunning)?this.blinkStyle:{}">:</p>
+        </span>
+    </div>
+    <div class="time">
+        <p class="placeholder">88</p>
+        <p class="time_unit">
+            {{record.seconds}}
+        </p>
+    </div>
+    <div class="time">
+        <span>
+            <p class="seperator time_unit" [ngStyle]="(isRunning)?this.blinkStyle:{}">.</p>
+        </span>
+    </div>
+    <div class="time">
+        <p class="placeholder">88</p>
+        <p class="time_unit">{{record.millis}}</p>
+    </div>
+</div>
