@@ -1,6 +1,8 @@
 import { TimerService, TimerRecord } from './../services/timer.service';
 import { Component, OnInit } from '@angular/core';
-
+/**
+ * Initial object to prevent NaN or undefied values
+ */
 const initialObject =  {
   id:0,
   millis :"00",
@@ -12,11 +14,19 @@ const initialObject =  {
   templateUrl: './timer-counter.component.html',
   styleUrls: ['./timer-counter.component.css','../app.component.css']
 })
-export class TimerCounterComponent implements OnInit {
+export class TimerCounterComponent {
+  //Timer state
   isTimerRunning;
+  //Number of millis since activation
   timerCounter;
+  //Assiging a copy from the initial object
   record:TimerRecord = Object.assign({},initialObject);
+
   constructor(private timerService:TimerService) {
+    /**
+     * Binds to the state change event, if running starts the timer 
+     * if not running pauses the timer.
+     */
     this.timerService.state.subscribe((isRunning) => {
       this.isTimerRunning = isRunning;
       if(this.isTimerRunning){
@@ -26,9 +36,11 @@ export class TimerCounterComponent implements OnInit {
       }
     });
   }
-  ngOnInit() {
-  }
-
+  /**
+   * Sets and interval for 10 ml that takes the 
+   * record object parse his attributes and assiging the new
+   * data in a MM:SS.mm format
+   */
   startTimer(){
     this.timerCounter = setInterval(() => {
       let millis = parseInt(this.record.millis);
@@ -52,23 +64,20 @@ export class TimerCounterComponent implements OnInit {
     },10);
   }
   
+  // creates a string template from two vars
   parseCounter(counter){
     if(parseInt(counter) > 10){
       return counter;
     }
     return String(counter).padStart(2,"0");
   }
-
+  // Clearing the interval of timeCounter assigned at startTimer
+  // In case that the current record is undefined it requires a restart of the timer
+  // Assigment to initial object
   stopTimer(){
     clearInterval(this.timerCounter);
-    debugger;
     if(!this.timerService.currentRecord){
-      this.record =  {
-        id:0,
-        millis :"00",
-        seconds : "00",
-        minutes : "00"
-      };
+      this.record =Object.assign({},initialObject);
     }
   }
 

@@ -9,6 +9,7 @@
 }
 .clock_wrapper{
     font-family: digital-7,sans-serif;
+    font-size: 2em
 }
 .placeholder{
     opacity: 0.2;
@@ -21,9 +22,8 @@
 }
 .time{
     display: inline-block;
-    width: 10px;
-    max-width: 10px;
-    margin: 0%;
+    width: 25px;
+    max-width: 35px;
 }
 .seperator{
     padding-left: 50%;

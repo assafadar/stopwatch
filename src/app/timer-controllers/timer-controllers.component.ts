@@ -6,9 +6,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './timer-controllers.component.html',
   styleUrls: ['./timer-controllers.component.css','../app.component.css']
 })
-export class TimerControllersComponent implements OnInit {
+export class TimerControllersComponent {
+  //Local state variable
   isTimerRunning
   constructor(private timerService: TimerService) {
+    /**
+     * Binding the state change event
+     */
     this.timerService.state.subscribe(
       (isRunning) => {
         this.isTimerRunning = isRunning;
@@ -16,9 +20,9 @@ export class TimerControllersComponent implements OnInit {
     )
   }
 
-  ngOnInit() {
-  }
-
+  /**
+  * starts or pauses the timer 
+  */
   startTimer(){
     if(this.isTimerRunning){
       this.timerService.stopTimer();
@@ -26,7 +30,9 @@ export class TimerControllersComponent implements OnInit {
       this.timerService.startTimer();
     }
   }
-
+  /**
+   * Creates a new timer record event
+   */
   recordTime(){
     try{
       this.timerService.createRecord();
@@ -34,7 +40,9 @@ export class TimerControllersComponent implements OnInit {
       alert(`Failed creating new record: ${e}`);
     }
   }
-
+  /**
+   * sends a delete all request
+   */
   deleteAllRecords(){
     this.timerService.deleteAllRecords();
   }

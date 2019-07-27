@@ -1,12 +1,12 @@
 <section class="controllers">
     <div class="start_btn" (click)="startTimer()">
-        <span><i class="fa fa-xs" [ngClass]="isTimerRunning?'fa-stop':'fa-play'"></i></span>
-        <span class="text">{{isTimerRunning?'Pause':'Play'}}</span>
+        <span><i class="fa " [ngClass]="isTimerRunning?'fa-stop':'fa-play'"></i></span>
+        <span class="text">{{isTimerRunning? 'Pause' : 'Play' }}</span>
     </div>
     <div class="record_time" (click)="recordTime()">
-        <i class="fa fa-stopwatch fa-xs"></i>
+        <i class="fa fa-stopwatch "></i>
     </div>
     <div class="delete_records" (click)="deleteAllRecords()">
-        <span><i class="far fa-trash-alt fa-xs"></i></span>
+        <span><i class="far fa-trash-alt "></i></span>
     </div>
 </section>

@@ -1,6 +1,6 @@
-.record_list{
+.list_wrapper{
+    padding-top: 2%;
     color: white;
-    font-size: 8px;
     margin: 0%;
 }
 ul{
@@ -8,12 +8,11 @@ ul{
     padding: 0;
 }
 .delete_btn{
-    font-size: 5px;
     padding: 1%;
+    margin-top:10%;
     background-color: red;
     font-family:'Helvetica', sans-serif;
     float: right;
-    margin: 5%;
 }
 hr{
     border: 0.2px solid grey
