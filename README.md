@@ -4,3 +4,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## The app can be viewd at:
 http://stopwatch.s3-website-eu-west-1.amazonaws.com/
+
+## Serer side:
+Spring boot - code can be found at: https://github.com/assafadar/stopwatch-springboot.git
